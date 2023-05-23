@@ -10,17 +10,17 @@ import javax.persistence.Table;
 public class Book {
 	@Id
 	@Column(name = "isbn")
-	String isbn;//條碼
+	String isbn;//條碼>isbnコード
 	@Column(name = "name")
 	String name ;//書名
 	@Column(name = "writer")
-	String writer;//作者
+	String writer;//作者>著者
 	@Column(name = "price")
-	Integer price;//價格
+	Integer price;//價格>価格
 	@Column(name = "stock")
-	Integer stock;//庫存
+	Integer stock;//庫存>在庫
 	@Column(name = "sales")
-	Integer sales;//銷售
+	Integer sales;//銷售量>販売量
 	@Column(name = "classification")
 	String classification; //分類
 	

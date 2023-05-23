@@ -12,12 +12,12 @@ import com.example.java_demo_book.entity.Book;
 public interface BookDao extends JpaRepository<Book, String> {
 	
 	
-	List<Book> findByClassification(String classification); //查詢類別
+	List<Book> findByClassification(String classification); //透過分類來尋找>分類を通して探す
 	
-	List<Book> findByIsbnOrNameOrWriter(String isbn,String name,String writer);//尋找Isbn或書名或作者
+	List<Book> findByIsbnOrNameOrWriter(String isbn,String name,String writer);//尋找Isbn或書名或作者>バーコードや本の書名や著者を通して探す
 	
-	List<Book> findByName(String name); //透過書名尋找
+	List<Book> findByName(String name); //透過書名尋找>本の書名を通して探す
 	
-	List<Book> findTop5ByOrderBySalesDesc();//尋找銷售量前5
+	List<Book> findTop5ByOrderBySalesDesc();//尋找銷售量前5名>売上高上位5位を探す
 
 }

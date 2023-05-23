@@ -12,9 +12,9 @@ public interface BookService {
 	
 	public BookResponse classificationSearch(BookRequest bookRequest);//搜尋類別
 	
-	public BookResponse consumerSearch(BookRequest bookRequest);//消費者查詢書籍
+	public BookResponse consumerSearch(BookRequest bookRequest);//查詢書籍<消費者+廠商>
 	
-	public BookResponse companySearch(BookRequest bookRequest);//廠商查詢書籍,一定要有isbn
+//	public BookResponse companySearch(BookRequest bookRequest);//廠商查詢書籍,一定要有isbn
 	
 	public BookResponse purchase(BookRequest bookRequest);//庫存更新
 	

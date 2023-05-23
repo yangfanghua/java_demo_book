@@ -10,19 +10,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BookRequest {
 	@JsonProperty("booklist")
-	public ArrayList<Book> booklist;
-	public List<String> booklistString; 
-	public Set<String> findclassification; //搜尋類別
-	public Map<String,Integer> buybooks; //購買書籍與數量
+
 	
-	private String isbn; //條碼
-	private String name ; //書名
-	private String writer; //作者
-	private Integer price; //價格
-	private Integer stock;//庫存
-	private Integer sales;//銷售量
+	private String isbn; //條碼>バーコード
+	private String name ; //書名>書名
+	private String writer; //作者>著者
+	private Integer price; //價格>価格
+	private Integer stock;//庫存>在庫
+	private Integer sales;//銷售量>販売量
 	private String classification; //分類
 	private Integer amount;//數量
+	private String identity;//人
+	
+	public ArrayList<Book> booklist;
+	public List<String> booklistString; 
+	public Set<String> findclassification; //搜尋類別>
+	public Map<String,Integer> buybooks; //購買書籍與數量>購入する本と購入数量が入っている
 	
 	public ArrayList<Book> getBooklist() {
 		return booklist;
@@ -98,6 +101,12 @@ public class BookRequest {
 	}
 	public void setAmount(Integer amount) {
 		this.amount = amount;
+	}
+	public String getIdentity() {
+		return identity;
+	}
+	public void setIdentity(String person) {
+		this.identity = person;
 	}
 	
 	

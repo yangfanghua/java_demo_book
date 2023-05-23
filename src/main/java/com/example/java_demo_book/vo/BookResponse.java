@@ -23,7 +23,6 @@ public class BookResponse {
 	private Integer total;//總金額
 	private ArrayList<Book> errobooklist;
 	private List<BookResponse> errobooklistResponse;
-	private String erromessage;
 	
 	public BookResponse() {
 
@@ -33,6 +32,13 @@ public class BookResponse {
 		this.message = message;
 	}
 	
+	
+	public BookResponse(String classification, String message) {
+		super();
+		this.classification = classification;
+		this.message = message;
+	}
+
 	public BookResponse(ArrayList<Book> booklist, String message) {
 		this.booklist = booklist;
 		this.message = message;
@@ -45,7 +51,6 @@ public class BookResponse {
 	
 	public BookResponse(List<BookResponse> responselist, String message,List<BookResponse> errobooklistResponse) {
 		this.errobooklistResponse = errobooklistResponse;
-		this.erromessage = erromessage;
 		this.responselist = responselist;
 		this.message = message;
 	}
@@ -195,13 +200,7 @@ public class BookResponse {
 		this.errobooklist = errobooklist;
 	}
 
-	public String getErromessage() {
-		return erromessage;
-	}
 
-	public void setErromessage(String erromessage) {
-		this.erromessage = erromessage;
-	}
 
 	public List<BookResponse> getErrobooklistResponse() {
 		return errobooklistResponse;
